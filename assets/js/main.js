@@ -127,8 +127,8 @@
 	const navToggle =document.querySelector('.nav-toggle');
 	const links = documents.querySelector('.links');
 	navToggle.addEventListener('click', () => {
-		links.classList.toggle('show-links');
-	});	
+        menu.classList.toggle('active');
+        });
 
 		// Toggle.
 			$navPanelToggle = $(
