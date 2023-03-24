@@ -124,6 +124,11 @@
 		$wrapper._parallax(0.925);
 
 	// Nav Panel.
+	const navToggle =document.querySelector('.nav-toggle');
+	const links = documents.querySelector('.links');
+	navToggle.addEventListener('click', () => {
+		links.classList.toggle('show-links');
+	});	
 
 		// Toggle.
 			$navPanelToggle = $(
