@@ -1054,134 +1054,106 @@ input, select, textarea {
 						}
 
 		}
-                 
-                     /* styles for the navigation menu */
-                    #nav {
-                      /* navigation menu styles go here */
-                     }
-
-                     .links {
-                       /* link styles go here */
-                     }
-
-                     .icons {
-                       /* icon styles go here */
-                     }
-
-                     /* navigation button styles */
-                     .menu-toggle {
-                       display: none; /* hide the button by default */
-                     }
-
-                      /* show the button only in mobile view */
-                      @media screen and (max-width: 768px) {
-                        .menu-toggle {
-                          display: block;
-                        }
-                        .links {
-                          display: none; /* hide the links in mobile view by default */
-                          position: absolute;
-                          top: 50px;
-                          left: 0;
-                          right: 0;
-                          text-align: center;
-                          background-color: #fff; /* add background color if desired */
-                          box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* add box shadow if desired */
-                       }
-                       .links.show {
-                         display: block; /* show the links when the button is clicked */
-                       }
-                       .links li {
-                         display: block;
-                         margin-bottom: 10px;
-                      }
-                  }
-
-                  /* other styles go here */
-
-                 /* styles for the navigation menu in mobile view */
-                 @media only screen and (max-width: 600px) {
-                /* Hide the links list and show the icons list on small screens */
-                  .links {
-                    display: none;
-                 }
-                 .icons {
-                   display: flex;
-                 }
-                 /* Show the navigation toggle button */
-                 .nav-toggle {
-                   display: block;
-                   position: absolute;
-                   top: 10px;
-                   right: 10px;
-                   z-index: 1;
-                   background-color: transparent;
-                   border: none;
-                   cursor: pointer;
-                   outline: none;
+                 @media only screen and (max-width:600px) {
+			.menu-toggle {
+			  display: block;
+			}	
+			.links {
+			  display: none;
+			}
+			.links.show {
+			  display: block;
+			  position: absolute;
+			  top: 60px;
+			  left: 0;
+			  width: 100%;
+			  background-color: #fff;
+			  padding: 10px;
+			  border-bottom: 1px solid #ccc;
+			}
+			.links.show li {
+			  display: block;
+			  margin-bottom: 10px;
+			}
+               }
+			.icons {
+			  display: flex;
+			}
+			.nav-toggle {
+			  display: block:
+			  position: absolute:
+		          top: 10px;
+			  right: 10px;
+			  z-index: 1;
+			  background-color: transparent;
+			  border: none;
+			  cursor: pointer;
+			  outline: none;
+			}
+			.menu-icon {
+			   display: block;
+			   width: 20px;
+			   height: 3px;
+			   margin-bottom: 3px;
+			   position: relative;
+			   background-color: #000;
+			   border-radius: 2px;
+			   z-index: 2;
+			}
+			.menu-icon:before,
+			.menu-icon:after {
+			  content: '';
+			  display: block;
+			  width: 20px;
+			  height: 3px;
+			  position: absolute;
+			  background-color: #000;
+			  border-radius: 2px;
+			  z-index: 2;
+			}
+			.menu-icon:before {
+			  top: -6px:
+			}
+			.menu-icon:after {
+			  bottom: -6px;
+			}.show-links .menu-icon {
+			   background-color: transparent;
+			}
+			.show-links .menu-icon:before {
+			  transform: rotate(45deg);
+			  bottom: 0;
+			}
+			.show-links .links {
+			  display: block;
+			  position: absolute;
+			  top: 100%;
+			  left: 0%;
+			  width: 100%;
+			  background-color: #fff;
+			  z-index: 1;
+			  padding: 10px;
+			  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+			}
+			.show-links .links li {
+			  display: block;
+			  margin-bottom: 10px;
+			}
+			.show-links .icons {
+			  display: none;
+			}
                 }
-                .menu-icon {
-                  display: block;
-                  width: 20px;
-                  height: 3px;
-                  margin-bottom: 3px;
-                  position: relative;
-                  background-color: #000;
-                  border-radius: 2px;
-                  z-index: 2;
-               }
-               .menu-icon:before,
-               .menu-icon:after {
-                 content: '';
-                 display: block;
-                 width: 20px;
-                 height: 3px;
-                 position: absolute;
-                 background-color: #000;
-                 border-radius: 2px;
-                  z-index: 2;
-               }
-               .menu-icon:before {
-                 top: -6px;
-               }
-               .menu-icon:after {
-               bottom: -6px;
-               }
-               .show-links .menu-icon {
-                 background-color: transparent;
-               }
-               .show-links .menu-icon:before {
-                  transform: rotate(45deg);
-                  top: 0;
-               }
-              .show-links .menu-icon:after {
-                transform: rotate(-45deg);
-                bottom: 0;
-               }
-               .show-links .links {
-                 display: block;
-                 position: absolute;
-                 top: 100%;
-                 left: 0;
-                 width: 100%;
-                 background-color: #fff;
-                 z-index: 1;
-                 padding: 10px;
-                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-               }
-               .show-links .links li {
-                 display: block;
-                 margin-bottom: 10px;
-              }
-              .show-links .icons {
-                display: none;
-              }
-           }
+                @media only screen and (min-width: 601px) {
+			.links {
+			  display: flex;
+			}
+			.icons {
+			  display: none;
+			}
+			.nav-toggle {
+			   display: none;
+			}
+                 }
 
-           /* styles for the navigation menu in desktop view */
-           @media only screen and (min-width: 601px) {
-           /* Show the links list and hide the icons list on larger screens */
-  .
 
 
                 
